@@ -17,6 +17,14 @@
         android:text="@string/user_name"
         android:textAlignment="center" />
 
+    <EditText
+        android:id="@+id/nickname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
     <ImageView
         android:id="@+id/star_image"
         android:layout_width="match_parent"
@@ -38,4 +46,5 @@
             android:lineSpacingMultiplier="1.2"
             android:text="@string/bio" />
     </ScrollView>
+
 </LinearLayout>
