@@ -2,4 +2,9 @@
     <string name="app_name">AboutMe</string>
     <string name="user_name">Lucas</string>
     <string name="yellow_star">Yellow Star</string>
+    <string name="bio">
+         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit turpis nec malesuada accumsan. Sed mi libero, luctus in quam a, viverra tempus ligula. Aliquam erat volutpat. Mauris gravida iaculis diam vitae maximus. Donec ipsum lectus, rutrum non mi non, consequat facilisis purus. Quisque laoreet fermentum nibh, et pellentesque quam sagittis eget. Aliquam vel arcu in massa tincidunt gravida. Donec pellentesque ullamcorper posuere. Suspendisse finibus in enim ac dictum. Quisque aliquam auctor gravida. Aenean blandit vitae urna sit amet luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas varius arcu odio, ac tempor velit imperdiet sed.
+
+         Pellentesque vel velit nec nunc efficitur semper. Curabitur mattis purus turpis, non porttitor quam auctor quis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In egestas, nunc vel feugiat vestibulum, nisl turpis malesuada felis, quis dignissim sem ligula sed turpis. Proin vitae nunc at mi congue blandit at sed lacus. In accumsan, libero at eleifend mattis, dui arcu pulvinar turpis, quis mattis dui dui a diam. Aenean fermentum nibh id lacus mattis tristique. Aenean lacinia mattis risus, a venenatis orci bibendum in. Quisque id convallis nisi.
+    </string>
 </resources>
