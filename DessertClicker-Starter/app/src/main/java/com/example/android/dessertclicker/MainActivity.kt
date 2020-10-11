@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         Timber.i("onCreate called")
 
         dessertTimer = DessertTimer(this.lifecycle)
-        
+
         if (savedInstanceState != null) {
             revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
             dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
