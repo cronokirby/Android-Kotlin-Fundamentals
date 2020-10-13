@@ -41,6 +41,8 @@ class GameFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         Log.i("GameFragment", "Called ViewModelProvider.get")
+        viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
+        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { done -> if (done) gameFinished() })
 
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
@@ -49,36 +51,13 @@ class GameFragment : Fragment() {
                 container,
                 false
         )
+        binding.gameViewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.endGameButton.setOnClickListener { onEndGame() }
 
-        viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
-        viewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
-        viewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
-            binding.wordText.text = newWord
-        })
-        viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer { done -> if (done) gameFinished() })
 
         return binding.root
 
-    }
-
-    /** Methods for buttons presses **/
-
-    private fun onSkip() {
-        viewModel.onSkip()
-    }
-
-    private fun onCorrect() {
-        viewModel.onCorrect()
-    }
-
-    private fun onEndGame() {
-        gameFinished()
     }
 
     private fun gameFinished() {
